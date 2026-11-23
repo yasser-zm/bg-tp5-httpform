@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #2c3e50;
+}
+
+/* Conteneur et en-tête */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e94560 0%, #c62a47 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.header::after {
+    content: "🎬";
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 150px;
+    opacity: 0.12;
+    transform: rotate(-10deg);
+}
+
+.header h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.header p {
+    position: relative;
+    z-index: 1;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ---------- Formulaire ---------- */
+.form {
+    padding: 35px;
+}
+
+.info-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+    font-size: 0.85rem;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+/* ---------- Cartes de section ---------- */
+.card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-left: 5px solid #e94560;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    color: #1a1a2e;
+    margin-bottom: 18px;
+}
+
+/* ---------- Champs ---------- */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e94560;
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.15);
+}
+
+textarea {
+    resize: vertical;
+}
+
+select[multiple] {
+    padding: 10px 12px;
+}
+
+/* ---------- Fieldset (radios et checkboxes) ---------- */
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 15px 20px 20px;
+    margin-bottom: 18px;
+}
+
+legend {
+    color: #e94560;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0 12px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    background: #f8f9fa;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.option:hover {
+    background: #f1f3f5;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    accent-color: #e94560;
+}
+
+/* ---------- Slider et couleur ---------- */
+.range-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type="range"] {
+    flex: 1;
+    accent-color: #e94560;
+}
+
+output {
+    min-width: 60px;
+    text-align: center;
+    background: #e94560;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.range-row span {
+    font-size: 0.9rem;
+}
+
+input[type="color"] {
+    width: 80px;
+    height: 45px;
+    padding: 4px;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ---------- Fichiers (zone de dépôt en pointillés) ---------- */
+input[type="file"] {
+    padding: 10px;
+    font-size: 0.85rem;
+    background: #f8f9fa;
+    border: 2px dashed #d0d0d0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+small {
+    display: block;
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* ---------- Bouton d'envoi ---------- */
+.submit-zone {
+    text-align: center;
+    padding-top: 5px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #e94560 0%, #c62a47 100%);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(233, 69, 96, 0.5);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form {
+        padding: 20px;
+    }
+}
